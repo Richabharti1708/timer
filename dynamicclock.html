@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+</head>
+
+<body>
+    <p id="showClock"></p>
+    <button onclick="clearInterval(clock)">click  Me</button><br><br>
+    <br><br>
+    <br><br>
+    <script>
+        var clock = setInterval(clocktiming, 1000);
+
+        function clocktiming() {
+            var d = new Date();
+            var time = d.toLocaleTimeString();
+            document.getElementById('showClock').innerHTML = time;
+        }
+    </script>
+</body>
+
+</html>
